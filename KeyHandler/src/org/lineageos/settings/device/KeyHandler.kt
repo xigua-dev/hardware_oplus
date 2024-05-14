@@ -63,7 +63,9 @@ class KeyHandler(context: Context) : DeviceKeyHandler {
 
         val deviceName = event.device.name
 
-        if (deviceName != "oplus,hall_tri_state_key" && deviceName != "oplus,tri-state-key") {
+        if (
+        event.keyCode != KeyEvent.KEYCODE_F3 &&
+        deviceName != "oplus,hall_tri_state_key" && deviceName != "oplus,tri-state-key") {
             return event
         }
 
